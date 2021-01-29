@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objective : MonoBehaviour
+public class Objective : MonoBehaviour
 {
     public int point = 1;
     public GameManager gm;
@@ -21,7 +21,7 @@ public class objective : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         gm.ObtainPoints(point);
-        if(other.gameObject.GetComponent<player>())
+        if(other.gameObject.GetComponent<Player>())
         {
             this.gameObject.SetActive(false);
         }

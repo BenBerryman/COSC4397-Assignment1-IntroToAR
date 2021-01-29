@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float speed = 100;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello world!");
+        
     }
 
     // Update is called once per frame

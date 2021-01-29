@@ -29,12 +29,14 @@ public class GameManager : MonoBehaviour
 
     public void SpawnObjective()
     {
+        
         foreach (var spawnPoint in spawnPoints)
         {
             GameObject cubePoint = Instantiate(templateObjective);
+            cubePoint.transform.parent = GameObject.Find("ImageTarget").transform;
             cubePoint.transform.position = spawnPoint.position;
-            cubePoint.GetComponent<objective>().point = 1;
-            cubePoint.GetComponent<objective>().gm = this;
+            cubePoint.GetComponent<Objective>().point = 1;
+            cubePoint.GetComponent<Objective>().gm = this;
         }
     }
     
